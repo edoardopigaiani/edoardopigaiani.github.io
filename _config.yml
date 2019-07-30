@@ -16,7 +16,7 @@
 title: Edoardo Pigaiani
 email: pigaianiedoardo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Born in 1995, I study Languages and Cultures for Tourism and International Commerce in Verona, I'm a former Tor relay operator also interested in open source, transparency, hacking and security. Sometimes I translate things.
+  Born in 1995, currently studying Languages and Cultures for International Commerce in Verona, I'm a former Tor relay operator also interested in open source, transparency, hacking and security. Sometimes I translate things.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://edoardopigaiani.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: edoardopigaiani
