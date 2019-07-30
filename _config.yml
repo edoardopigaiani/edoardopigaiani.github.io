@@ -26,8 +26,7 @@ github_username:  edoardopigaiani
 
 # Build settings
 markdown: kramdown
-# theme: minima
-remote_theme: mmistakes/minimal-mistakes@4.16.5
+theme: minima
 plugins:
   - jekyll-feed
 
