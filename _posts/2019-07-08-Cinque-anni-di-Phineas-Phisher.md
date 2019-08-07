@@ -2,24 +2,19 @@
 layout: post
 title:  "Cinque anni di Phineas Phisher, l'hacker vigilante mosso dagli ideali"
 ---
-
-# Cinque anni di Phineas Phisher, l'hacker vigilante mosso dagli ideali
-
-## Introduzione
-
 Phineas Phisher, l'hacker vigilante noto al mondo per il furto di dati ad Hacking team, è una figura spesso sfuggente ma al contempo molto ironica, pungente e sprezzante del pericolo.
 
 Questo post vuole essere una raccolta di ciò che sappiamo su di lui, le sue azioni, le idee che spesso lo muovono e le sue dichiarazioni.
 
 ![](https://video-images.vice.com/articles/589c8942d8beda21078a01b6/lede/1486653799489-phineas-fisher-puppet.jpeg?crop=0.9194444444444445xw:1xh;center,center&resize=700:*)
 
-## 1.1 - Il thread, la scoperta, i dati
+##Il thread, la scoperta, i dati
 
 ![](https://i.imgur.com/H4Yi3Lm.png)
 
 È il 4 Agosto 2014 quando sul subreddit r/Anarchism appare [un post](https://www.reddit.com/r/Anarchism/comments/2cjlop/gamma_international_leaked/) dal titolo "Gamma International Leaked". Proseguendo nella lettura il contenuto è subito chiaro, l'autore del post è riuscito ad esfiltrare e pubblicare online 40GB di dati appartenenti a Gamma International, un'azienda anglo-tedesca. Ma chi è e cosa fa Gamma International? E perchè è stata scelta come vittima?
 
-## 1.2 - Gamma International, i clienti e le controversie
+##Gamma International, i clienti e le controversie
 
 Gamma International è un'azienda che vende software spia a vari governi sparsi per il mondo. Il software venduto (denominato FinFisher), può essere installato sui vari device ad insaputa dei proprietari e contribuisce a sorvegliare soggetti sotto indagine da parte delle forze dell'ordine. La compagnia, in passato [già criticata](https://citizenlab.org/storage/finfisher/final/fortheireyesonly.pdf) da parte di attivisti per i diritti umani, è nota alle cronache per aver venduto il proprio software a governi considerati autoritari come [Egitto](https://www.theregister.co.uk/2011/09/21/egypt_cyber_spy_controversy/), Bahrain ed [Etiopia](https://www.eff.org/press/releases/american-sues-ethiopian-government-spyware-infection). L'opinione comune è che questi governi lo abbiano utilizzato per scopi tutt'altro che benefici, come ad esempio il controllo di dissidenti politici ed attivisti.
 
@@ -27,18 +22,18 @@ Nei dati sottratti all'azienda sono contenute molte informazioni sensibili: la l
 
 Stando a quanto dichiarato da Mikko Hypponen a Bloomberg poco tempo prima infatti *"Sappiamo che esiste, ma non l'abbiamo mai visto. Provate ad immaginare un diamante raro"*.
 
-## 1.3 - Il personaggio, l'ironia ed il silenzio
+##Il personaggio, l'ironia ed il silenzio
 
 ![](https://zdnet4.cbsistatic.com/hub/i/r/2014/10/04/eeb2d3ef-4bd8-11e4-b6a0-d4ae52e95e57/resize/770xauto/fc8679620e9fc88215ce55e6fcb13dac/gamma-pr-01.jpg)
 
 L'hacker, che nel frattempo si è dato un nome (Phineas Phisher) e twitta dall'account parodia [@GammaGroupPR](https://twitter.com/gammagrouppr), dopo qualche tweet ironico passa al silenzio, fino quando che non deciderà di far parlare di nuovo di sè.
 
 
-## 2.1 - Il ritorno, il tweet e l'affaire Hacking team
+##Il ritorno, il tweet e l'affaire Hacking team
 
 Il personaggio di Phineas Phisher tuttavia è ben altro che sparito. Il 5 Luglio 2015 infatti l'account dell'italianissima Hacking team twitta un ironico *"Since we have nothing to hide, we're publishing all our e-mails, files, and source code ..."*, allegando un link ad un archivio contenete oltre 400GB di dati contenenti e-mail, fatture e [codice sorgente](https://github.com/hackedteam) dei software dell'azienda. Ma (di nuovo), chi è e cosa fa Hacking team? E perchè è stata scelta come vittima?
 
-## 2.2 - Hacking team, i clienti ed i sospetti
+##Hacking team, i clienti ed i sospetti
 
 Hacking team, azienda con sede a Milano, è il principale competitor della già citata Gamma Group. Essa vende infatti la propria suite di software spia in primis alla [Questura di Milano](https://en.wikipedia.org/wiki/Hacking_Team#History), e successivamente anche ai [Servizi segreti](https://www.dagospia.com/rubrica-3/politica/hacking-war-rapporti-dell-hacking-team-generali-colonnelli-104871.htm) prima italiani e poi di altri paesi. Ed è proprio sugli altri paesi che è (nuovamente) necessario soffermarsi.
 
@@ -48,7 +43,7 @@ Le fatture non fanno altro che confermare ciò che i ricercatori sospettavano or
 
 La vicenda Hacking team è molto complicata, si delinea infatti il profilo di una realtà in contatto con i più alti gradi dei Servizi segreti (non solo italiani), Esercito, Ministero della difesa e molti altri. Ne è già stato scritto ampiamente, un [ottimo articolo](https://www.ilpost.it/2016/05/15/hacking-team/) ad esempio è presente su Il Post.
 
-## 2.3 - Il seguito dell'attacco, "HackBack" e le motivazioni
+##Il seguito dell'attacco, "HackBack" e le motivazioni
 
 Nonostante inizialmente l'identità dell'attaccante di Hacking team non sia nota, è proprio lui a [confermare](https://www.vice.com/en_us/article/wnj9a5/hacker-claims-responsibility-for-the-hit-on-hacking-team) di essere Phineas Phisher.
 
@@ -67,7 +62,7 @@ to all those who have had their blood spilled by Italian fascists"*.
 
 Le autorità italiane tuttavia [non riusciranno](https://www.vice.com/en_us/article/3k9zzk/hacking-team-hacker-phineas-fisher-has-gotten-away-with-it) mai a risalire all'identità di Phineas Phisher, che tornerà ancora una volta nell'ombra.
 
-## 3.1 - Il video, il Sindicat De Mossos d'Esquadra ed il nuovo dump
+##Il video, il Sindicat De Mossos d'Esquadra ed il nuovo dump
 
 Alcuni mesi dopo l'hacker fa la [propria apparizione](https://www.vice.com/en_us/article/vv77y9/phineas-fisher-sme) su YouTube in un video (ora rimosso) che lo mostra in azione mentre commette un furto di dati ai danni del Sindicat De Mossos d'Esquadra, il corpo di polizia spagnolo. Le informazioni rubate sono di poco conto, ma permettono di collegare un agente al proprio numero di badge.
 
@@ -77,7 +72,7 @@ Nel video appare la frase: *"Hehe, mossos are probably too busy tear gassing pro
 
 L'intento è ormai chiaro, e il significato del già citato "hack back" è sempre più forte.
 
-## 4.1 - L'ultimo atto, l'AKP e Wikileaks
+##L'ultimo atto, l'AKP e Wikileaks
 
 L'ultima azione rivendicata dall'hacker ha luogo il 20 Luglio 2016, ai danni del partito turco AKP. 
 
@@ -89,7 +84,7 @@ La fonte, infatti, sembrerebbe essere proprio Phineas Phisher.
 
 L'[articolo](https://www.vice.com/en_us/article/yp3n55/phineas-fisher-turkish-government-hack) di Vice sulla vicenda contiene al suo interno anche le dichiarazioni rilasciate dall'hacker, che anche questa volta ha agito mosso da un ideale.
 
-## 5.1 - L'intervista, la pausa ed il podcast
+##L'intervista, la pausa ed il podcast
 
 L'attacco all'AKP segna l'ultima azione dell'hacker, che però non sparirà completamente. Poco tempo prima del suo ultimo attacco aveva infatti accettato di essere [intervistato](https://www.vice.com/en_us/article/78kwke/hacker-phineas-fisher-hacking-team-puppet) nell'ambito di un documentario di Vice sui cyber mercenari, a patto di essere interpretato da una marionetta.
 
