@@ -4,4 +4,4 @@ title: Resources
 permalink: /resources/
 ---
 
-Nothing to see here.
+Nothing to see here. Go away.
