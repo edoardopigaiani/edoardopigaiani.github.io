@@ -5,7 +5,7 @@ permalink: /about/
 ---
 # Italiano
 
-Nato nel 1995, Sono un operatore di un relay Tor, hacker, mi interesso anche di information security. Sto terminando una laurea in Lingue e culture per il commercio internazionale presso l'Università di Verona.
+Nato nel 1995, sono un operatore di un relay Tor, hacker, mi interesso anche di information security. Sto terminando una laurea in Lingue e culture per il commercio internazionale presso l'Università di Verona.
 
 Più informazioni sul mio relay Tor
 [qui](https://metrics.torproject.org/rs.html#search/contact:pigaianiedoardo(at)gmail(dot)com).
