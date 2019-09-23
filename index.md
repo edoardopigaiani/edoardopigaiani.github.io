@@ -5,4 +5,4 @@
 layout: page
 ---
 
-You should really check out my (Medium)[https://medium.com/edoardopigaiani]. I know it sucks, but I'm too lazy to write posts here.
+You should really check out my [Medium](https://medium.com/edoardopigaiani). I know it sucks, but I'm too lazy to write posts here.
