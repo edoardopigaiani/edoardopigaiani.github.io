@@ -1,6 +1,9 @@
-# Intercept Android app traffic with Burp suite
-
-
+---
+layout: post
+title:  "Intercept Android app traffic with Burp suite"
+date:   2019-10-09 22:25:11 +0200
+categories: Android
+---
 ## Introduction and clarifications
 
 If the app we are going to analyze uses Certificate pinning you shouldn’t be referring to this guide.
