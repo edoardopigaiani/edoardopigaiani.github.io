@@ -55,3 +55,5 @@ $ chmod 644 /system/etc/security/cacerts/<cert>.0
 
 ### Intercept the traffic
    * Reconnect to the wireless network on your Android device, you should start seeing traffic flowing on Burp’s Intercept tab.
+
+_(Thanks to Jacopo for pointing me in the right direction regarding the fact that I was basically writing bullshit.)_
