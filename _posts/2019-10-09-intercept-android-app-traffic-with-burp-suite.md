@@ -1,4 +1,4 @@
-# Bypass Android certificate pinning and intercept app traffic with Burp suite
+# Intercept Android app traffic with Burp suite
 
 
 ## Introduction and clarifications
