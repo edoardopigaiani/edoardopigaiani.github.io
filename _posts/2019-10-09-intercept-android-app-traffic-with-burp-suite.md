@@ -18,7 +18,8 @@ If the app we are going to analyze uses Certificate pinning you shouldn’t be r
 ### Install the Burp certificate as system-level CA
    - Export the Burp CA
         Start Burp suite, navigate to Proxy > Options > Import/export Ca certificate
-* Convert the CA using openssl, since Android wants it in .pem format and to have the filename equal to the subject_hash_old value appended with .0
+* Convert the CA using openssl, since Android wants it in ```.pem``` format and to have the filename equal to the ```subject_hash_old``` value appended with ```.0```
+
 ```
 $ openssl x509 -inform DER -in cacert.der -out cacert.pem
 $ openssl x509 -inform PEM -subject_hash_old -in cacert.pem | head -1  
@@ -26,6 +27,7 @@ $ mv cacert.pem <hash>.0
 ```
 
 - Mount ```/system``` as writable, then copy the certificate to the device
+
 ```
 $ adb root  
 $ adb remount  
@@ -33,6 +35,7 @@ $ adb push <cert>.0 /sdcard/
 ```
 
 - Spawn a shell, move the certificate where it belongs and ```chmod``` to 644
+
 ```
 $ adb shell
 $ mv /sdcard/<cert>.0 /system/etc/security/cacerts/  
