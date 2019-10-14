@@ -9,7 +9,7 @@ categories: Hackthebox
 
 ![](https://i.imgur.com/ovX598s.png)
 
-SwagShop, which appeared on HackTheBox on 2019/05/12, is a fun and easy GNU/Linux box. It contains an ecommerce shop running on an old/unpatched version of Magento which has some known and ready-to-use exploits. The path is quite straightforward, after some initial enumeration we can gain access to the admin panel, upload a reverse shell, get user.txt and root.txt in a couple of minutes.
+SwagShop, which appeared on HackTheBox on 2019/05/12, is a fun and easy GNU/Linux box. It contains an ecommerce shop running on an old/unpatched version of **Magento** which has some known and ready-to-use exploits. The path is quite straightforward, after some initial enumeration we can gain access to the admin panel, upload a reverse shell, get ```user.txt``` and ```root.txt``` in a couple of minutes.
 
 ## Enumeration
 
@@ -75,7 +75,7 @@ Gobuster v2.0.1              OJ Reeves (@TheColonial)
 =====================================================
 ```
 
-The scan pokes us with a couple of interesting pages, while taking a look at all of them we stumble upon http://10.10.10.140/downloader/ which contains the login panel of **Magento connect manager**, Magento’s original marketplace for extensions.
+The scan pokes us with a couple of interesting pages, while taking a look at all of them we stumble upon ```http://10.10.10.140/downloader/``` which contains the login panel of **Magento connect manager**, Magento’s original marketplace for extensions.
 
 ![](https://i.imgur.com/EOAwSMQ.png)
 
@@ -160,3 +160,5 @@ sudo /usr/bin/vi /var/www/html/root.sh
 Allows us to run ```vi``` as ```root``` in ```/var/www/html/``` and to launch a root shell by typing ```:!bash``` inside vi. After that, ```cat /root/root.txt``` gets the job done.
 
 ![](https://i.imgur.com/DA8zEiq.png)
+
+__(Low quality pics because I lost the original ones, recovered this one from a pdf I exported a while ago while discovering that Google docs renders images quite badly)__
