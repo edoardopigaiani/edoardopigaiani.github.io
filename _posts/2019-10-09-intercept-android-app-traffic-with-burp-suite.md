@@ -6,7 +6,7 @@ categories: Android
 ---
 ## Introduction and clarifications
 
-If the app we are going to analyze uses Certificate pinning you shouldn’t be referring to this guide.
+If the app we are going to analyze uses Certificate pinning you shouldn’t be referring to this guide. Certificate pinning is the process of comparing the server’s TLS certificate against a saved copy of that certificate, app developers are often encouraged to bake in a copy of the server’s certificate and make use of certificate pinning because it increases the complexity of MITM attacks.
 
 ## Prerequisites
    - Burp suite, openssl, adb
