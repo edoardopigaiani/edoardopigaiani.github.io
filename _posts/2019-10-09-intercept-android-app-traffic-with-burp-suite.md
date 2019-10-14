@@ -7,8 +7,6 @@ categories: Android
 ## Introduction and clarifications
 
 If the app we are going to analyze uses Certificate pinning you shouldn’t be referring to this guide.
-[Certificate pinning](https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning) is the process of comparing the server’s TLS certificate against a saved copy of that certificate, app developers are often encouraged to bake in a copy of the server’s certificate and make use of certificate pinning because it increases the complexity of MITM attacks. There are two ways of bypassing it: the first one is to decompile the .apk, patch the smali code and recompile it; the second one is to install the Burp CA as system-level CA on the device. I’m going to cover the second one, since last [Paged out!](https://pagedout.institute/) issue  explained how to decompile .apk files to inspect them.
-
 
 ## Prerequisites
    - Burp suite, openssl, adb
