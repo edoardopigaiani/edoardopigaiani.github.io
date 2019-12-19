@@ -16,7 +16,7 @@
 title: My blog, I guess.
 email: pigaianiedoardo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write-ups about things I enjoy doing.
+  Tearing things apart for fun.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: edoardopigaiani
@@ -24,7 +24,7 @@ github_username:  edoardopigaiani
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-time-machine
 plugins:
   - jekyll-feed
 
