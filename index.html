@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>edo's landing page</title>
+  <meta name="description" content="Edoardo Pigaiani's GitHub repositories.">
+  <script>
+    // Apply a saved theme before first paint to avoid a flash of the wrong theme.
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fdfdfc;
+      --fg: #1b1b1a;
+      --muted: #6b6b68;
+      --link: #1b1b1a;
+      --border: #e4e4e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #141413;
+        --fg: #ececea;
+        --muted: #9a9a96;
+        --link: #ececea;
+        --border: #2c2c2a;
+      }
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #141413;
+      --fg: #ececea;
+      --muted: #9a9a96;
+      --link: #ececea;
+      --border: #2c2c2a;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 4rem 16px;
+    }
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+    a { color: var(--link); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    #theme-toggle {
+      flex: none;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--fg);
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    #theme-toggle:hover { border-color: var(--muted); }
+
+    #repos { list-style: none; margin: 0; padding: 0; }
+    #repos li {
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+    }
+    #repos li:last-child { border-bottom: 1px solid var(--border); }
+    .repo-name { font-weight: 600; overflow-wrap: anywhere; }
+    .repo-desc { margin: 0.25rem 0 0; }
+    .repo-meta {
+      margin: 0.25rem 0 0;
+      font: 0.8rem/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: var(--muted);
+    }
+    .repo-meta span + span::before { content: " · "; }
+    .status { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>edo's landing page</h1>
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode"></button>
+    </header>
+
+    <main>
+      <h2>my repos</h2>
+      <ul id="repos">
+        <li class="status">loading…</li>
+      </ul>
+      <noscript>
+        <p class="status">See my repositories on <a href="https://github.com/edoardopigaiani">GitHub</a>.</p>
+      </noscript>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.getElementById('theme-toggle');
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function currentTheme() {
+        return root.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+      }
+
+      function renderToggle() {
+        var dark = currentTheme() === 'dark';
+        toggle.textContent = dark ? '☀' : '☾';
+        toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+
+      toggle.addEventListener('click', function () {
+        var next = currentTheme() === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        renderToggle();
+      });
+      systemDark.addEventListener('change', renderToggle);
+      renderToggle();
+    })();
+
+    (function () {
+      var list = document.getElementById('repos');
+      var profile = 'https://github.com/edoardopigaiani';
+
+      function el(tag, className, text) {
+        var node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text != null) node.textContent = text;
+        return node;
+      }
+
+      function showMessage(text) {
+        list.innerHTML = '';
+        var li = el('li', 'status', text + ' ');
+        var a = el('a', null, 'Browse them on GitHub.');
+        a.href = profile;
+        li.appendChild(a);
+        list.appendChild(li);
+      }
+
+      fetch('https://api.github.com/users/edoardopigaiani/repos?per_page=100&sort=pushed')
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.status);
+          return res.json();
+        })
+        .then(function (repos) {
+          repos = repos.filter(function (r) { return !r.fork; });
+          if (!repos.length) return showMessage('No public repositories yet.');
+
+          list.innerHTML = '';
+          repos.forEach(function (r) {
+            var li = el('li');
+            var name = el('a', 'repo-name', r.name);
+            name.href = r.html_url;
+            li.appendChild(name);
+            if (r.description) li.appendChild(el('p', 'repo-desc', r.description));
+
+            var meta = el('p', 'repo-meta');
+            if (r.language) meta.appendChild(el('span', null, r.language));
+            meta.appendChild(el('span', null, '★ ' + r.stargazers_count));
+            li.appendChild(meta);
+            list.appendChild(li);
+          });
+        })
+        .catch(function () {
+          showMessage('Couldn’t load repositories right now.');
+        });
+    })();
+  </script>
+</body>
+</html>
